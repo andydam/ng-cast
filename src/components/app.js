@@ -1,7 +1,7 @@
 angular.module('video-player')
 
 .component('app', {
-  controller: function(youTube) {
+  controller: function($scope, youTube) {
     //selectVideo click hander,changes the current video
     //es6 arrow functions needed to maintain proper this scope
     this.selectVideo = video => {

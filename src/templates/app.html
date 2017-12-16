@@ -1,8 +1,9 @@
 <div id="app container">
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
-      <!-- render a search bar, search-results is the search callback from app -->
-      <search result="$ctrl.searchResults"><h5><em>search</em> component goes here</h5></search>
+      <!-- render a search bar, result is the search callback from app -->
+      <!-- search-provider passes in the string name of the service we want to use -->
+      <search result="$ctrl.searchResults" search-provider="youTube"><h5><em>search</em> component goes here</h5></search>
     </div>
   </nav>
   <div class="row">

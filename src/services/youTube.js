@@ -25,6 +25,6 @@ angular.module('video-player')
         key: window.YOUTUBE_API_KEY,
         videoId,
       },
-      method: 'GET' }).then(response => callback(response.data.items));
+      method: 'GET' }).then(response => callback(response.data));
   };
 });

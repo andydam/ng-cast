@@ -2,7 +2,7 @@
   <!-- ng-keypress uses a ternary condition to check keycode -->
   <!-- if keyCode is enter key, search -->
   <!-- ng-change is onChange handler for input field, ng-model-options debounce debounces onChange by 500ms -->
-  <input class="form-control" type="text" ng-model="$ctrl.searchText" ng-model-options='{ debounce: 500 }' ng-change='$ctrl.service.search($ctrl.searchText, $ctrl.result)' />
+  <input class="form-control" type="text" ng-model="$ctrl.searchText" ng-keypress="$event.keyCode === 13 ? $ctrl.service.search($ctrl.searchText, $ctrl.result) : return" ng-model-options="{ debounce: 500 }" ng-change="$ctrl.service.search($ctrl.searchText, $ctrl.result)" />
   <!-- on search button click or enter key, run youtube service search method with input text -->
   <button class="btn" ng-click="$ctrl.service.search($ctrl.searchText, $ctrl.result)">
     <span class="glyphicon glyphicon-search"></span>

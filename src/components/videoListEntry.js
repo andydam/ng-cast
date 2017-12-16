@@ -1,9 +1,12 @@
 angular.module('video-player')
+
 .component('videoListEntry', {
-  // TODO
+  //variables and methods receieved from parent
+  //'<' indicates one way binding
   bindings: {
     video: '<',
-    selectVideo: '<',
+    selectVideo: '<'
   },
+  //templateUrl holds a link to template
   templateUrl: 'src/templates/videoListEntry.html'
 });

@@ -1,14 +1,11 @@
 angular.module('video-player')
 
 .component('videoPlayer', {
-  // TODO
-  controller: function($scope) {
-    // console.log(this);
-    // console.log(this.video);
-    // console.log($scope);
-  },
+  //variables and methods receieved from parent
+  //'<' indicates one way binding
   bindings: {
     video: '<'
   },
+  //templateUrl holds a link to template
   templateUrl: 'src/templates/videoPlayer.html'
 });

@@ -1,7 +1,10 @@
 angular.module('video-player')
+
 .service('youTube', function($http) {
-  // TODO
-  this.search = function(query) {
+  this.search = function(query, callback) {
+    //search function uses $http to make an ajax request to youtube
+    //$http is a native angular method
+    //calls callback with data once received
     $http({url: 'https://www.googleapis.com/youtube/v3/search',
       params: {
         part: 'snippet',
@@ -11,8 +14,6 @@ angular.module('video-player')
         type: 'video',
         videoEmbeddable: 'true' 
       }, 
-      method: 'GET' }).then(response => {
-        console.log(response.data);
-      });
+      method: 'GET' }).then(response => callback(response.data));
   };
 });

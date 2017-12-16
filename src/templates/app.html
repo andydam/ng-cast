@@ -1,14 +1,17 @@
 <div id="app container">
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
-      <search search-results="$ctrl.searchResults"><h5><em>search</em> component goes here</h5></search>
+      <!-- render a search bar, search-results is the search method from app -->
+      <search search-results="$ctrl.search"><h5><em>search</em> component goes here</h5></search>
     </div>
   </nav>
   <div class="row">
     <div class="col-md-7">
+      <!-- render a video-player, video is used to send current video to video player -->
       <video-player video="$ctrl.currentVideo"><h5><em>videoPlayer</em> component goes here</h5></video-player>
     </div>
     <div class="col-md-5">
+      <!-- render a video-list, videos is used to send a list of videos to list, select-video is click handler from app for video list entries -->
       <video-list videos="$ctrl.videos" select-video="$ctrl.selectVideo"><h5><em>videoList</em> component goes here</h5></video-list>
     </div>
   <div>

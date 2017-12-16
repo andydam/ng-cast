@@ -4,7 +4,8 @@ angular.module('video-player')
   //variables and methods receieved from parent
   //'<' indicates one way binding
   bindings: {
-    searchResults: '<'
+    search: '<',
+    result: '<'
   },
   //templateUrl holds a link to template
   templateUrl: 'src/templates/search.html'

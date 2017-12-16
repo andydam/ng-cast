@@ -3,7 +3,7 @@
   <!-- if keyCode is enter key, search -->
   <input class="form-control" type="text" ng-model="$ctrl.searchText" ng-keypress="$event.keyCode === 13 ? $ctrl.searchResults($ctrl.searchText) : return" />
   <!-- on search button click, run app search method with input text -->
-  <button class="btn" ng-click="$ctrl.searchResults($ctrl.searchText)">
+  <button class="btn" ng-click="$ctrl.service.search($ctrl.searchText, $ctrl.result)">
     <span class="glyphicon glyphicon-search"></span>
   </button>
 </div>

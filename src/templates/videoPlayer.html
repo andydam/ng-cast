@@ -1,6 +1,9 @@
 <div class="video-player">
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src={{'https://www.youtube.com/embed/'+$ctrl.video.id.videoId}} allowFullScreen></iframe>
+    <!-- use ng-if to remove video player from DOM if no video passed -->
+    <iframe class="embed-responsive-item" src={{'https://www.youtube.com/embed/'+$ctrl.video.id.videoId}} ng-if="$ctrl.video.id" allowFullScreen></iframe>
+    <!-- use ng-if to remove please wait from DOM if video passed -->
+    <span ng-if="!$ctrl.video.id">Please wait</span>
   </div>
   <div class="video-player-details">
     <h3>{{ $ctrl.video.snippet.title }}</h3>

@@ -12,13 +12,18 @@ angular.module('video-player')
     this.search = query => {
       youTube.search(query, this.searchResults);
     }; 
+    //search for youtube callback
+    //takes youtube data and stores it in videos
+    //es6 arrow functions needed to maintain proper this scope
     this.searchResults = data => {
-      this.videos = data.items;
+      this.videos = data;
       this.currentVideo = this.videos[0];
     };
-    //declare variables to hold videos and currently selected video
-    this.videos = window.exampleVideoData;
-    this.currentVideo = this.videos[0];
+    this.videos = [];
+    this.currentVideo = {};
+
+    //initial search on youtube to populate app on launch
+    this.search('Christmas');
   },
   //templateUrl holds a link to template
   templateUrl: 'src/templates/app.html'

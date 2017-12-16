@@ -14,6 +14,6 @@ angular.module('video-player')
         type: 'video',
         videoEmbeddable: 'true' 
       }, 
-      method: 'GET' }).then(response => callback(response.data));
+      method: 'GET' }).then(response => callback(response.data.items));
   };
 });

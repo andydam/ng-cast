@@ -1,5 +1,5 @@
 <ul class="video-list">
   <!-- ng-repeat creates a video-list-entry for each video in videos -->
   <!-- select-video is used to pass down click handler from app -->
-  <video-list-entry ng-repeat="video in $ctrl.videos" video="video" select-video="$ctrl.selectVideo"><h5><em>videoListEntry</em> component goes here</h5></video-list-entry>
+  <video-list-entry ng-repeat="video in $ctrl.videos" video="video" select-video="$ctrl.onClick"><h5><em>videoListEntry</em> component goes here</h5></video-list-entry>
 </ul>

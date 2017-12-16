@@ -5,7 +5,7 @@ angular.module('video-player')
   //'<' indicates one way binding
   bindings: {
     videos: '<',
-    selectVideo: '<'
+    onClick: '<'
   },
   //templateUrl holds a link to template
   templateUrl: 'src/templates/videoList.html'

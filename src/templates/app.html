@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
       <!-- render a search bar, search-results is the search method from app -->
-      <search search-results="$ctrl.search"><h5><em>search</em> component goes here</h5></search>
+      <search search="$ctrl.search" service="youTube" result="$ctrl.searchResults"><h5><em>search</em> component goes here</h5></search>
     </div>
   </nav>
   <div class="row">
@@ -11,8 +11,8 @@
       <video-player video="$ctrl.currentVideo"><h5><em>videoPlayer</em> component goes here</h5></video-player>
     </div>
     <div class="col-md-5">
-      <!-- render a video-list, videos is used to send a list of videos to list, select-video is click handler from app for video list entries -->
-      <video-list videos="$ctrl.videos" select-video="$ctrl.selectVideo"><h5><em>videoList</em> component goes here</h5></video-list>
+      <!-- render a video-list, videos is used to send a list of videos to list, on-click is click handler from app for video list entries -->
+      <video-list videos="$ctrl.videos" on-click="$ctrl.selectVideo"><h5><em>videoList</em> component goes here</h5></video-list>
     </div>
   <div>
 </div>

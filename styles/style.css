@@ -42,7 +42,21 @@ body {
   margin-right: 20px;
 }
 
+.video-comment-list {
+  margin-left: 20px;
+  margin-right: 20px;
+  -webkit-padding-start: 0px;
+}
+
 .video-player-details {
+  background: #fff;
+  padding: 8px;
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  margin-top: 10px;
+}
+
+.video-comment-list-entry {
   background: #fff;
   padding: 8px;
   border: 0;

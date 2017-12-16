@@ -1,7 +1,7 @@
 <div id="app container">
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
-      <!-- render a search bar, search-results is the search method from app -->
+      <!-- render a search bar, search-results is the search callback from app -->
       <search result="$ctrl.searchResults"><h5><em>search</em> component goes here</h5></search>
     </div>
   </nav>
@@ -9,6 +9,8 @@
     <div class="col-md-7">
       <!-- render a video-player, video is used to send current video to video player -->
       <video-player video="$ctrl.currentVideo"><h5><em>videoPlayer</em> component goes here</h5></video-player>
+      <!-- render a video-comment-list, current-comments is used to send current comments to comment list -->
+      <video-comment-list current-comments="$ctrl.currentComments"><h5><em>videoCommentList</em> component goes here</h5></video-comment-list>
     </div>
     <div class="col-md-5">
       <!-- render a video-list, videos is used to send a list of videos to list, on-click is click handler from app for video list entries -->

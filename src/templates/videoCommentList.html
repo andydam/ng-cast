@@ -1,0 +1,5 @@
+<ul class="video-comment-list" ng-if="$ctrl.currentComments.length > 0">
+  <!-- use ng-if to hide comments if video does not have comments -->
+  <!-- ng-repeat creates a video-comment-list-entry for each comment in current comments -->
+  <video-comment-list-entry ng-repeat="comment in $ctrl.currentComments" comment="comment"><h5><em>videoCommentListEntry</em> component goes here</h5></video-comment-list-entry>
+</ul>

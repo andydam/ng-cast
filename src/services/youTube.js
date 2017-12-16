@@ -16,4 +16,15 @@ angular.module('video-player')
       }, 
       method: 'GET' }).then(response => callback(response.data.items));
   };
+
+  this.showComments = function(videoId, callback) {
+    //showComments function uses $http to make an ajax request to youtube to get comments for videoId
+    $http({url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      params: {
+        part: 'snippet',
+        key: window.YOUTUBE_API_KEY,
+        videoId,
+      },
+      method: 'GET' }).then(response => callback(response.data.items));
+  };
 });

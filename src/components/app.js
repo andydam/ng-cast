@@ -7,11 +7,6 @@ angular.module('video-player')
     this.selectVideo = video => {
       this.currentVideo = video;
     };
-    //search for youtube video using query
-    //es6 arrow functions needed to maintain proper this scope
-    this.search = query => {
-      youTube.search(query, this.searchResults);
-    }; 
     //search for youtube callback
     //takes youtube data and stores it in videos
     //es6 arrow functions needed to maintain proper this scope
@@ -23,7 +18,7 @@ angular.module('video-player')
     this.currentVideo = {};
 
     //initial search on youtube to populate app on launch
-    this.search('Christmas');
+    youTube.search('Christmas', this.searchResults);
   },
   //templateUrl holds a link to template
   templateUrl: 'src/templates/app.html'
